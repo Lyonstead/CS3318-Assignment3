@@ -4,67 +4,76 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ColourTest {
 
-    Colour coloura1 = new Colour(1.0f, 1.0f, 1.0f);
-    Colour coloura2 = new Colour(0.0f, 0.0f, 0.0f);
-    Colour colourb1 = new Colour("111100001111000011110000");
+    Colour colour1 = new Colour(1.0f, 1.0f, 1.0f);
+    Colour colour2 = new Colour(0.0f, 0.0f, 0.0f);
+    Colour colour3 = new Colour("111100001111000011110000");
+    Colour colour4 = new Colour(2.0f, 2.0f, 2.0f); // Invalid Input (Too large)
 
     @Test
-    void inputValidation() {
-        assertEquals(255, coloura1.red);
-        assertEquals(255, coloura1.green);
-        assertEquals(255, coloura1.blue);
-        assertEquals(0, coloura2.red);
-        assertEquals(0, coloura2.green);
-        assertEquals(0, coloura2.blue);
-        assertEquals(240, colourb1.red);
-        assertEquals(240, colourb1.green);
-        assertEquals(240, colourb1.blue);
+    void testMapping() {
+        assertEquals(255, colour1.red);
+        assertEquals(255, colour1.green);
+        assertEquals(255, colour1.blue);
+        assertEquals(0, colour2.red);
+        assertEquals(0, colour2.green);
+        assertEquals(0, colour2.blue);
+        assertEquals(240, colour3.red);
+        assertEquals(240, colour3.green);
+        assertEquals(240, colour3.blue);
     }
 
     @Test
     void valuesInBounds() {
         int maxBound = 255;
         int minBound = 0;
-        assertTrue(coloura1.red <= maxBound);
-        assertTrue(coloura1.red >= minBound);
-        assertTrue(coloura1.green <= maxBound);
-        assertTrue(coloura1.green >= minBound);
-        assertTrue(coloura1.blue <= maxBound);
-        assertTrue(coloura1.blue >= minBound);
-        assertTrue(coloura2.red <= maxBound);
-        assertTrue(coloura2.red >= minBound);
-        assertTrue(coloura2.green <= maxBound);
-        assertTrue(coloura2.green >= minBound);
-        assertTrue(coloura2.blue <= maxBound);
-        assertTrue(coloura2.blue >= minBound);
-        assertTrue(colourb1.red <= maxBound);
-        assertTrue(colourb1.red >= minBound);
-        assertTrue(colourb1.green <= maxBound);
-        assertTrue(colourb1.green >= minBound);
-        assertTrue(colourb1.blue <= maxBound);
-        assertTrue(colourb1.blue >= minBound);
+        assertTrue(colour1.red <= maxBound);
+        assertTrue(colour1.red >= minBound);
+        assertTrue(colour1.green <= maxBound);
+        assertTrue(colour1.green >= minBound);
+        assertTrue(colour1.blue <= maxBound);
+        assertTrue(colour1.blue >= minBound);
+        assertTrue(colour2.red <= maxBound);
+        assertTrue(colour2.red >= minBound);
+        assertTrue(colour2.green <= maxBound);
+        assertTrue(colour2.green >= minBound);
+        assertTrue(colour2.blue <= maxBound);
+        assertTrue(colour2.blue >= minBound);
+        assertTrue(colour3.red <= maxBound);
+        assertTrue(colour3.red >= minBound);
+        assertTrue(colour3.green <= maxBound);
+        assertTrue(colour3.green >= minBound);
+        assertTrue(colour3.blue <= maxBound);
+        assertTrue(colour3.blue >= minBound);
+        assertTrue(colour4.red <= maxBound);
+        assertTrue(colour4.red >= minBound);
+        assertTrue(colour4.green <= maxBound);
+        assertTrue(colour4.green >= minBound);
+        assertTrue(colour4.blue <= maxBound);
+        assertTrue(colour4.blue >= minBound);
 
-        assertFalse(coloura1.red > maxBound);
-        assertFalse(coloura1.red < minBound);
-        assertFalse(coloura1.green > maxBound);
-        assertFalse(coloura1.green < minBound);
-        assertFalse(coloura1.blue > maxBound);
-        assertFalse(coloura1.blue < minBound);
-        assertFalse(coloura2.red > maxBound);
-        assertFalse(coloura2.red < minBound);
-        assertFalse(coloura2.green > maxBound);
-        assertFalse(coloura2.green < minBound);
-        assertFalse(coloura2.blue > maxBound);
-        assertFalse(coloura2.blue < minBound);
-        assertFalse(colourb1.red > maxBound);
-        assertFalse(colourb1.red < minBound);
-        assertFalse(colourb1.green > maxBound);
-        assertFalse(colourb1.green < minBound);
-        assertFalse(colourb1.blue > maxBound);
-        assertFalse(colourb1.blue < minBound);
-    }
-
-    @Test
-    void correctValueType() {
+        assertFalse(colour1.red > maxBound);
+        assertFalse(colour1.red < minBound);
+        assertFalse(colour1.green > maxBound);
+        assertFalse(colour1.green < minBound);
+        assertFalse(colour1.blue > maxBound);
+        assertFalse(colour1.blue < minBound);
+        assertFalse(colour2.red > maxBound);
+        assertFalse(colour2.red < minBound);
+        assertFalse(colour2.green > maxBound);
+        assertFalse(colour2.green < minBound);
+        assertFalse(colour2.blue > maxBound);
+        assertFalse(colour2.blue < minBound);
+        assertFalse(colour3.red > maxBound);
+        assertFalse(colour3.red < minBound);
+        assertFalse(colour3.green > maxBound);
+        assertFalse(colour3.green < minBound);
+        assertFalse(colour3.blue > maxBound);
+        assertFalse(colour3.blue < minBound);
+        assertFalse(colour4.red > maxBound);
+        assertFalse(colour4.red < minBound);
+        assertFalse(colour4.green > maxBound);
+        assertFalse(colour4.green < minBound);
+        assertFalse(colour4.blue > maxBound);
+        assertFalse(colour4.blue < minBound);
     }
 }

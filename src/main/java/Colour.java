@@ -5,6 +5,7 @@ public class Colour {
     int blue;
 
     public Colour(float red, float green, float blue) {
+
         this.red = (int) (red * 255);
         this.green = (int) (green * 255);
         this.blue = (int) (blue * 255);
