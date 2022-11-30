@@ -50,30 +50,5 @@ class ColourTest {
         assertTrue(colour4.green >= minBound);
         assertTrue(colour4.blue <= maxBound);
         assertTrue(colour4.blue >= minBound);
-
-        assertFalse(colour1.red > maxBound);
-        assertFalse(colour1.red < minBound);
-        assertFalse(colour1.green > maxBound);
-        assertFalse(colour1.green < minBound);
-        assertFalse(colour1.blue > maxBound);
-        assertFalse(colour1.blue < minBound);
-        assertFalse(colour2.red > maxBound);
-        assertFalse(colour2.red < minBound);
-        assertFalse(colour2.green > maxBound);
-        assertFalse(colour2.green < minBound);
-        assertFalse(colour2.blue > maxBound);
-        assertFalse(colour2.blue < minBound);
-        assertFalse(colour3.red > maxBound);
-        assertFalse(colour3.red < minBound);
-        assertFalse(colour3.green > maxBound);
-        assertFalse(colour3.green < minBound);
-        assertFalse(colour3.blue > maxBound);
-        assertFalse(colour3.blue < minBound);
-        assertFalse(colour4.red > maxBound);
-        assertFalse(colour4.red < minBound);
-        assertFalse(colour4.green > maxBound);
-        assertFalse(colour4.green < minBound);
-        assertFalse(colour4.blue > maxBound);
-        assertFalse(colour4.blue < minBound);
     }
 }
