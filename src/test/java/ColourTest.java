@@ -7,7 +7,6 @@ class ColourTest {
     Colour colour1 = new Colour(1.0f, 1.0f, 1.0f);
     Colour colour2 = new Colour(0.0f, 0.0f, 0.0f);
     Colour colour3 = new Colour("111100001111000011110000");
-    Colour colour4 = new Colour(2.0f, 2.0f, 2.0f); // Invalid Input (Too large)
 
     @Test
     void testMapping() {
@@ -44,11 +43,10 @@ class ColourTest {
         assertTrue(colour3.green >= minBound);
         assertTrue(colour3.blue <= maxBound);
         assertTrue(colour3.blue >= minBound);
-        assertTrue(colour4.red <= maxBound);
-        assertTrue(colour4.red >= minBound);
-        assertTrue(colour4.green <= maxBound);
-        assertTrue(colour4.green >= minBound);
-        assertTrue(colour4.blue <= maxBound);
-        assertTrue(colour4.blue >= minBound);
+    }
+
+    @Test
+    void testInputLength() {
+        assertEquals(colour3.rgb.length(), 24);
     }
 }
