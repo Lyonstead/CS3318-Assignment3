@@ -37,4 +37,13 @@ public class Colour {
         }
     }
 
+    public boolean equals(Colour other) {
+        if (    this.red == other.red &&
+                this.green == other.green &&
+                this.blue == other.blue) {
+            return true;
+        }
+        else return false;
+    }
+
 }
