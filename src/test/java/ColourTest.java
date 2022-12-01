@@ -8,6 +8,7 @@ class ColourTest {
     Colour colour2 = new Colour(0.0f, 0.0f, 0.0f);
     Colour colour3 = new Colour("111100001111000011110000");
     Colour colour4 = new Colour("111111111111111111111111");
+    Colour colour5 = new Colour("000000000000000000000000");
 
 
     @Test
@@ -66,8 +67,13 @@ class ColourTest {
         }
     }
 
-    void testOppositeComparison() {
-        assertTrue(colour1 != colour4);
+    @Test
+    void testComparison() {
         assertTrue(colour1.equals(colour4));
+        assertTrue(colour2.equals(colour5));
+        assertTrue(colour4.equals(colour1));
+        assertTrue(colour5.equals(colour2));
+        assertFalse(colour1.equals(colour2));
+        assertFalse(colour1.equals(colour5));
     }
 }
