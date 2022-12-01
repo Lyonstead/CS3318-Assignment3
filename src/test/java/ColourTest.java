@@ -49,4 +49,11 @@ class ColourTest {
     void testInputLength() {
         assertEquals(colour3.rgb.length(), 24);
     }
+
+    @Test
+    void testInputIsBinary() {
+        for (int i = 0; i < colour3.rgb.length(); i++) {
+            assertTrue((colour3.rgb.substring(i, i+1).equals("1") || colour3.rgb.substring(i, i+1).equals("0")));
+        }
+    }
 }
