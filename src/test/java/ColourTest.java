@@ -7,7 +7,16 @@ class ColourTest {
     Colour colour1 = new Colour(1.0f, 1.0f, 1.0f);
     Colour colour2 = new Colour(0.0f, 0.0f, 0.0f);
     Colour colour3 = new Colour("111100001111000011110000");
+    Colour colour4 = new Colour("111111111111111111111111");
 
+
+    @Test
+    void testNotNull() {
+        assertFalse(colour1 == null);
+        assertFalse(colour2 == null);
+        assertFalse(colour3 == null);
+        assertFalse(colour4 == null);
+    }
     @Test
     void testMapping() {
         assertEquals(255, colour1.red);
@@ -55,5 +64,10 @@ class ColourTest {
         for (int i = 0; i < colour3.rgb.length(); i++) {
             assertTrue((colour3.rgb.substring(i, i+1).equals("1") || colour3.rgb.substring(i, i+1).equals("0")));
         }
+    }
+
+    void testOppositeComparison() {
+        assertTrue(colour1 != colour4);
+        assertTrue(colour1.equals(colour4));
     }
 }
