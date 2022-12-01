@@ -12,10 +12,10 @@ class ColourTest {
 
     @Test
     void testNotNull() {
-        assertFalse(colour1 == null);
-        assertFalse(colour2 == null);
-        assertFalse(colour3 == null);
-        assertFalse(colour4 == null);
+        assertNotNull(colour1);
+        assertNotNull(colour2);
+        assertNotNull(colour3);
+        assertNotNull(colour4);
     }
     @Test
     void testMapping() {
